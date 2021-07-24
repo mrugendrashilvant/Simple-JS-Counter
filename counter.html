@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Counter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  	<style type="text/css">
+  		body {
+  			background: lightcyan;
+  			margin: auto;
+  		}
+  		main {
+  			position: absolute;
+  			margin: auto;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+  			background: lightblue;
+  			padding: 20px;
+  		}
+  		main div{
+  			padding: 20px;
+  		}
+
+  	</style>
+</head>
+<body>
+	<main class="container">
+			<div class="row justify-content-center">
+				<h1 class="col col-8" style="display: inline;">Counter:</h1>
+				<h1 id="value" class="col col-4" style="display: inline;">0</h1>
+			</div>
+			<div>
+				<button class="btn decrease" onclick="decrease()">Decrease</button>
+				<button class="btn reset" onclick="reset()">Reset</button>
+				<button class="btn increase" onclick="increase()">Increase</button>
+			</div>
+	</main>
+</body>
+
+<script type="text/javascript" defer>
+/*let count = 0;
+	
+	const value = document.querySelector('#value');
+	const btns = document.querySelectorAll(".btn");
+
+	btns.forEach(function(btn){
+		btn.addEventListener('click', function(e){
+			const styles = e.currentTarget.classList;
+
+			if(styles.contains('decrease')){
+				count--;
+			}
+			else if(styles.contains('reset')){
+				count = 0;
+			}
+			else{
+				count++;
+			}
+			value.textContent = count;
+		})
+	});*/
+
+	let count = 0;
+
+	function increase(){
+		count++;
+		document.getElementById('value').innerHTML = count;
+	}
+	function reset(){
+		count = 0;
+		document.getElementById('value').innerHTML = count;
+	}
+	function decrease(){
+		count--;
+		document.getElementById('value').innerHTML = count;
+	}
+</script>
+
+</html>
